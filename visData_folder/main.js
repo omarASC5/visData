@@ -1,4 +1,5 @@
-for (let i = 0; i < userData.results.length; i++) {
+
+for (let i = 0; i < userData.length; i++) {
     const userDiv = document.createElement('div');
     const state_paragraph = document.createElement('p');
     const add_image = document.createElement('img');
@@ -37,18 +38,18 @@ const person_name = document.getElementsByClassName('person_name');
 const person_email = document.getElementsByClassName('person_email');
 const person_city = document.getElementsByClassName('person_city');
 
-const person_state_uppercase = titleCase(userData.results[i].location.state);
+const person_state_uppercase = titleCase(userData[i].location.state);
 person_state[i].innerHTML = "State: " + person_state_uppercase;
 
-person_image[i].src = userData.results[i].picture.large;
+person_image[i].src = userData[i].picture.large;
 
-person_name_uppercase = titleCase((userData.results[i].name.title + ". " + userData.results[i].name.first + " " + userData.results[i].name.last));
+person_name_uppercase = titleCase((userData[i].name.title + ". " + userData[i].name.first + " " + userData[i].name.last));
 
 person_name[i].innerHTML = "Name: " + person_name_uppercase;
 
-person_email[i].innerHTML = "Email: " + userData.results[i].email;
+person_email[i].innerHTML = "Email: " + userData[i].email;
 
-const person_city_uppercase = titleCase(userData.results[i].location.city)
+const person_city_uppercase = titleCase(userData[i].location.city)
 person_city[i].innerHTML = "City: " + person_city_uppercase;
 
 }
