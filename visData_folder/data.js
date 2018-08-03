@@ -349,11 +349,24 @@ json = JSON.stringify(json.results);
 
 var userData = JSON.parse(json);
 
+function sortByGender() {
     //Sort by Gender
-    // userData.sort(function(a,b) {return (a.gender > b.gender) ? 1 : ((b.gender > a.gender) ? -1 : 0);} );
+    userData.sort(function(a,b) {return (a.gender > b.gender) ? 1 : ((b.gender > a.gender) ? -1 : 0);} );
     
+    removeElementsByClass('person');
+}
+    
+function sortByState() {
     //Sort by State
-    userData.sort(function(a,b) {return (a.location.state > b.location.state) ? 1 : ((b.location.state > a.location.state) ? -1 : 0);} );
+   userData.sort(function(a,b) {return (a.location.state > b.location.state) ? 1 : ((b.location.state > a.location.state) ? -1 : 0);} );
+   removeElementsByClass('person');
+}
 
+function sortByCity() {
     //Sort by City
-    // userData.sort(function(a,b) {return (a.location.city > b.location.city) ? 1 : ((b.location.city > a.location.city) ? -1 : 0);} );
+    userData.sort(function(a,b) {return (a.location.city > b.location.city) ? 1 : ((b.location.city > a.location.city) ? -1 : 0);} );
+    removeElementsByClass('person');
+}
+
+    //https://duckduckgo.com/?q=how+to+parse+json&t=hf&ia=qa
+
