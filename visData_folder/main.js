@@ -6,7 +6,8 @@ function addUsers() {
         const name_paragraph = document.createElement('p');
         const email_paragraph = document.createElement('p');
         const city_paragraph = document.createElement('p');
-        
+        const horizontal_rule = document.createElement('hr');
+
 
         document.body.appendChild(userDiv);
         userDiv.appendChild(state_paragraph);
@@ -14,6 +15,7 @@ function addUsers() {
         userDiv.appendChild(name_paragraph);
         userDiv.appendChild(email_paragraph);
         userDiv.appendChild(city_paragraph);
+        userDiv.appendChild(horizontal_rule);
 
         state_paragraph.classList.add("person_state");
         add_image.classList.add("person_image");
