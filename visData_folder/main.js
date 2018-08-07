@@ -8,15 +8,19 @@ function addUsers() {
         const city_paragraph = document.createElement('p');
         const horizontal_rule = document.createElement('hr');
 
+        const mainDiv = document.querySelector('.main-container');
+
+
 
         document.body.appendChild(userDiv);
+        mainDiv.appendChild(userDiv);
         userDiv.appendChild(state_paragraph);
         userDiv.appendChild(add_image);
         userDiv.appendChild(name_paragraph);
         userDiv.appendChild(email_paragraph);
         userDiv.appendChild(city_paragraph);
         userDiv.appendChild(horizontal_rule);
-
+        
         state_paragraph.classList.add("person_state");
         add_image.classList.add("person_image");
         name_paragraph.classList.add("person_name");
@@ -59,3 +63,18 @@ function addUsers() {
 }
 
 addUsers();
+
+
+function searchFunction() {
+    const searchInput = document.getElementById('search-field');
+    let toFilter = searchInput.value;
+    const containerDiv = document.getElementById('main-container');
+
+    for (let i = 0; i < userData.length; i++) {
+        if (userData[0].gender[0] == toFilter[0]) {
+            console.log("YAYY");
+        }
+    }
+}
+
+searchFunction();

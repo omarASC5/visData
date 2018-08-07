@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Visualizing Data</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="data.js"></script>
     <script src="utilities.js" defer></script>
@@ -17,5 +18,14 @@
     <button onclick="sortByCity()">Sort by City</button>
     <button onclick="sortByGender()">Sort by Gender</button>
 
+    
+    <form>
+        <div id="search-container">
+            <input id="search-field" type="search" placeholder="Find your match..." name="searching" onkeyup="searchFunction()">
+            <button>Search</button>
+        </div>
+    </form>
+    
+    <div class="main-container"></div>
 </body>
 </html>

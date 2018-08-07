@@ -5,6 +5,14 @@ body, html {
     text-align: center;
 }
 
+
+#search-field {
+    margin-top: 0.75rem;
+    margin-bottom: 1rem;
+    padding: 0.2rem;
+    width: 25%;
+}
+
 .person {
     background-image: url("assets/Moonlit Asteroid.jpg");
 }
